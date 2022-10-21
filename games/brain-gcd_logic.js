@@ -1,28 +1,27 @@
 import readlineSync from 'readline-sync';
 import {
-  playerGreeting, timesCount, name, winGame,
+  name, playerGreeting, timesCount, winGame,
 } from '../src/index.js';
 
-const operators = ['+', '-', '*'];
 let isSuccessful = true;
-
-const calcGame = () => {
+const gcdGame = () => {
   playerGreeting();
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < timesCount; i += 1) {
-    let correctAnswer;
+    const gcd = (a, b) => {
+      let r;
+      while (b !== 0) {
+        r = a % b;
+        a = b;
+        b = r;
+      }
+      return a;
+    };
     const randomNumber1 = Math.floor(Math.random() * 101);
     const randomNumber2 = Math.floor(Math.random() * 101);
-    const randomOperator = operators[Math.floor(Math.random() * 3)];
-    console.log(`Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`);
+    console.log(`Question: ${randomNumber1} ${randomNumber2}`);
     const answer = +readlineSync.question('Your answer: ');
-    if (randomOperator === '+') {
-      correctAnswer = randomNumber1 + randomNumber2;
-    } else if (randomOperator === '-') {
-      correctAnswer = randomNumber1 - randomNumber2;
-    } else {
-      correctAnswer = randomNumber1 * randomNumber2;
-    }
+    const correctAnswer = gcd(randomNumber1, randomNumber2);
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
@@ -36,4 +35,4 @@ const calcGame = () => {
   }
 };
 
-export { calcGame };
+export { gcdGame };

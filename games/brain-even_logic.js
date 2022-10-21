@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
-import { name, playerGreeting, timesCount, winGame } from '../src/index.js';
+import {
+  name, playerGreeting, timesCount, winGame,
+} from '../src/index.js';
 
 let isSuccessful = true;
 
