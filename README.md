@@ -5,3 +5,6 @@
 
 Brain-even asciinema:
 https://asciinema.org/connect/d704a2ca-4606-40d9-85b2-7721bc25e18a
+
+Brain-calc asciinema:
+https://asciinema.org/connect/d704a2ca-4606-40d9-85b2-7721bc25e18a
