@@ -4,7 +4,7 @@ import {
 } from '../src/index.js';
 
 let isSuccessful = true;
-const gameProgression = () => {
+const progressionGame = () => {
   playerGreeting();
   console.log('What number is missing from the progression?');
   let hiddenNumber;
@@ -22,8 +22,7 @@ const gameProgression = () => {
     for (const item of arr) {
       if (item === hiddenNumber) {
         arrHidden.push('..');
-      }
-      else {
+      } else {
         arrHidden.push(item);
       }
     }
@@ -51,4 +50,4 @@ const gameProgression = () => {
   }
 };
 
-export {gameProgression};
+export {progressionGame};
