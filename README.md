@@ -3,17 +3,28 @@
 
 <a href="https://codeclimate.com/github/Hamsterrific/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/dc7d6503adf157c34711/maintainability" /></a>
 
-Brain-even asciinema:
-https://asciinema.org/a/hb7hSK107xXxmWwTzcjiDHZXQ
+## Description
+A set of mathematical games
 
-Brain-calc asciinema:
-https://asciinema.org/a/ULn5Kj1LSicRThKLyFSTlCyyJ
+## Requirements
 
-Brain-gcd asciinema:
-https://asciinema.org/a/jsNLUvEDtpiYYhhrxBgvDmFam
+Node.js v18.11
 
-Brain-progression asciinema:
-https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN
+## Installation
 
-Brain-prime asciinema:
-https://asciinema.org/a/SPsSQha11Bk5ABkedjNqht7Zt
+### install
+
+```
+npm i
+```
+## Asciinema
+
+[![asciicast](https://asciinema.org/a/hb7hSK107xXxmWwTzcjiDHZXQ)
+
+[![asciicast](https://asciinema.org/a/ULn5Kj1LSicRThKLyFSTlCyyJ)
+
+[![asciicast](https://asciinema.org/a/jsNLUvEDtpiYYhhrxBgvDmFam)
+
+[![asciicast](https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN)
+
+[![asciicast](https://asciinema.org/a/SPsSQha11Bk5ABkedjNqht7Zt)
