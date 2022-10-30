@@ -8,7 +8,7 @@ A set of mathematical games
 
 ## Requirements
 
-Node.js v18.11
+Node.js v18.11 or higher
 
 ## Installation
 

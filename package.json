@@ -8,12 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js",
-    "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js",
-    "brain-prime": "bin/brain-prime.js"
+    "brain-games": "bin/games.js",
+    "brain-even": "bin/even.js",
+    "brain-calc": "bin/calc.js",
+    "brain-gcd": "bin/gcd.js",
+    "brain-progression": "bin/progression.js",
+    "brain-prime": "bin/prime.js"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,11 @@
   },
   "homepage": "https://github.com/Hamsterrific/frontend-project-44#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "eslint": "^8.25.0"
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
