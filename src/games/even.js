@@ -3,8 +3,8 @@ import {
   name, playerGreeting, timesCount, winGame,
 } from '../index.js';
 
-let correctAnswer;
 let isSuccessful = true;
+let correctAnswer;
 
 const generateRound = () => {
   const randomNumber = Math.floor(Math.random() * 101);
@@ -18,7 +18,7 @@ const generateRound = () => {
 
 const runEven = () => {
   playerGreeting();
-  console.log();
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < timesCount; i += 1) {
     console.log(generateRound());
     const answer = readlineSync.question('Your answer: ');

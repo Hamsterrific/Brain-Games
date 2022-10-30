@@ -19,11 +19,11 @@ npm i
 ```
 ## Asciinema
 
-[![asciicast](https://asciinema.org/a/hb7hSK107xXxmWwTzcjiDHZXQ.svg)](https://asciinema.org/a/hb7hSK107xXxmWwTzcjiDHZXQ)
+[![asciicast](https://asciinema.org/a/i1LJMGfhZHYQFeWJSmaGe7Oxm.svg)](https://asciinema.org/a/i1LJMGfhZHYQFeWJSmaGe7Oxm)
 
-[![asciicast](https://asciinema.org/a/ULn5Kj1LSicRThKLyFSTlCyyJ.svg)](https://asciinema.org/a/ULn5Kj1LSicRThKLyFSTlCyyJ)
+[![asciicast](https://asciinema.org/a/Sym58hrcWUCGVI3MgosyaAwcH.svg)](https://asciinema.org/a/Sym58hrcWUCGVI3MgosyaAwcH)
 
-[![asciicast](https://asciinema.org/a/jsNLUvEDtpiYYhhrxBgvDmFam.svg)](https://asciinema.org/a/jsNLUvEDtpiYYhhrxBgvDmFam)
+[![asciicast](https://asciinema.org/a/cEJw9aXKn3cDXh6hTCwd58lMr.svg)](https://asciinema.org/a/cEJw9aXKn3cDXh6hTCwd58lMr)
 
 [![asciicast](https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN.svg)](https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN)
 
