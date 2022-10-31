@@ -1,10 +1,8 @@
-import readlineSync from 'readline-sync';
-import {
-  name, playerGreeting, timesCount, winGame,
-} from '../index.js';
+/* eslint-disable import/prefer-default-export */
+import { processGame } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
-let isSuccessful = true;
+const gameTask = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => {
   let r;
@@ -25,24 +23,7 @@ const generateRound = () => {
 };
 
 const runGCD = () => {
-  playerGreeting();
-  console.log('Find the greatest common divisor of given numbers.');
-  const [question, correctAnswer] = generateRound();
-  console.log(question);
-  for (let i = 0; i < timesCount; i += 1) {
-    console.log(generateRound());
-    const answer = +readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is a wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
-      isSuccessful = false;
-      return;
-    }
-  }
-  if (isSuccessful) {
-    winGame();
-  }
+  processGame(gameTask, generateRound);
 };
 
 export { runGCD };

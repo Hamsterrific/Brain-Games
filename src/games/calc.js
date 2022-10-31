@@ -1,11 +1,10 @@
-import readlineSync from 'readline-sync';
-import {
-  playerGreeting, timesCount, name, winGame,
-} from '../index.js';
+/* eslint-disable import/prefer-default-export */
+
+import { processGame } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
 const operators = ['+', '-', '*'];
-let isSuccessful = true;
+const gameTask = 'What is the result of the expression?';
 
 const generateRound = () => {
   const randomNumber1 = generateRandomNumber(1, 100);
@@ -24,23 +23,7 @@ const generateRound = () => {
 };
 
 const runCalc = () => {
-  playerGreeting();
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < timesCount; i += 1) {
-    const [question, correctAnswer] = generateRound();
-    console.log(question);
-    const answer = +readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is a wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
-      isSuccessful = false;
-      return;
-    }
-  }
-  if (isSuccessful) {
-    winGame();
-  }
+  processGame(gameTask, generateRound);
 };
 
 export { runCalc };
