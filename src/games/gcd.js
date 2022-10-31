@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable import/prefer-default-export */
 import { processGame } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
