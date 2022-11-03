@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable import/prefer-default-export */
-import { processGame } from '../index.js';
+import { run } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
 const gameTask = 'Find the greatest common divisor of given numbers.';
@@ -19,12 +18,12 @@ const generateRound = () => {
   const randomNumber1 = generateRandomNumber(1, 100);
   const randomNumber2 = generateRandomNumber(1, 100);
   const question = `Question: ${randomNumber1} ${randomNumber2}`;
-  const correctAnswer = gcd(randomNumber1, randomNumber2);
-  return [question, correctAnswer];
+  const correctAnswer = gcd(randomNumber1, randomNumber2).toString();
+  return [question, correctAnswer.toString()];
 };
 
 const runGCD = () => {
-  processGame(gameTask, generateRound);
+  run(gameTask, generateRound);
 };
 
-export { runGCD };
+export default runGCD;

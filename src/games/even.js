@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import { processGame } from '../index.js';
+import { run } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
 const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -17,7 +16,7 @@ const generateRound = () => {
 };
 
 const runEven = () => {
-  processGame(gameTask, generateRound);
+  run(gameTask, generateRound);
 };
 
-export { runEven };
+export default runEven;

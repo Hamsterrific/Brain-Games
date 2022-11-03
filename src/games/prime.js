@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import { processGame } from '../index.js';
+import { run } from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
 const gameTask = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -29,7 +28,7 @@ const generateRound = () => {
 };
 
 const runPrime = () => {
-  processGame(gameTask, generateRound);
+  run(gameTask, generateRound);
 };
 
-export { runPrime };
+export default runPrime;

@@ -1,29 +1,34 @@
-/* eslint-disable import/prefer-default-export */
-
-import { processGame } from '../index.js';
-import { generateRandomNumber } from '../utils.js';
+import { run } from '../index.js';
+import { generateRandomNumber, generateRandomIndex } from '../utils.js';
 
 const operators = ['+', '-', '*'];
 const gameTask = 'What is the result of the expression?';
 
 const generateRound = () => {
-  const randomNumber1 = generateRandomNumber(1, 100);
-  const randomNumber2 = generateRandomNumber(1, 100);
-  const randomOperator = operators[Math.floor(Math.random() * 3)];
-  const question = `Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`;
+  const number1 = generateRandomNumber(1, 100);
+  const number2 = generateRandomNumber(1, 100);
+  const operator = generateRandomIndex(operators);
+  const question = `Question: ${number1} ${operator} ${number2}`;
   let correctAnswer;
-  if (randomOperator === '+') {
-    correctAnswer = randomNumber1 + randomNumber2;
-  } else if (randomOperator === '-') {
-    correctAnswer = randomNumber1 - randomNumber2;
-  } else {
-    correctAnswer = randomNumber1 * randomNumber2;
+  switch (operator) {
+    case '+':
+      correctAnswer = number1 + number2;
+      break;
+    case '-':
+      correctAnswer = number1 - number2;
+      break;
+    case '*':
+      correctAnswer = number1 * number2;
+      break;
+    default:
+      correctAnswer = null;
   }
+  correctAnswer = correctAnswer.toString();
   return [question, correctAnswer];
 };
 
 const runCalc = () => {
-  processGame(gameTask, generateRound);
+  run(gameTask, generateRound);
 };
 
-export { runCalc };
+export default runCalc;

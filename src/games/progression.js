@@ -1,6 +1,5 @@
-/* eslint-disable import/prefer-default-export */
-import { processGame } from '../index.js';
-import { generateRandomNumber } from '../utils.js';
+import { run } from '../index.js';
+import { generateRandomNumber, generateRandomIndex } from '../utils.js';
 
 const gameTask = 'What number is missing in the progression?';
 
@@ -15,7 +14,7 @@ const makeProgression = (number, step, length) => {
 const generateRound = () => {
   let correctAnswer;
   const hideNumber = (arr) => {
-    correctAnswer = arr[Math.floor(Math.random() * arr.length)];
+    correctAnswer = generateRandomIndex(arr);
     const arrHidden = [];
     // eslint-disable-next-line no-restricted-syntax
     for (const item of arr) {
@@ -33,11 +32,12 @@ const generateRound = () => {
   const progression = makeProgression(startingNumber, progressionStep, progressionLength);
   const hiddenProgression = hideNumber(progression);
   const question = `Question: ${hiddenProgression.join(' ')}`;
+  correctAnswer = correctAnswer.toString();
   return [question, correctAnswer];
 };
 
 const runProgression = () => {
-  processGame(gameTask, generateRound);
+  run(gameTask, generateRound);
 };
 
-export { runProgression };
+export default runProgression;
