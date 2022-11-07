@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 
 const greetPlayer = () => {
@@ -7,4 +6,4 @@ const greetPlayer = () => {
   console.log(`Hello, ${name}`);
 };
 
-export { greetPlayer };
+export default greetPlayer;

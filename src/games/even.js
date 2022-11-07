@@ -1,11 +1,11 @@
-import { run } from '../index.js';
+import run from '../index.js';
 import { generateRandomNumber } from '../utils.js';
 
-const gameTask = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateRound = () => {
   const randomNumber = generateRandomNumber(1, 100);
-  const question = `Question: ${randomNumber}`;
+  const question = `${randomNumber}`;
   let correctAnswer;
   if (randomNumber % 2 === 0) {
     correctAnswer = 'yes';
@@ -16,7 +16,7 @@ const generateRound = () => {
 };
 
 const runEven = () => {
-  run(gameTask, generateRound);
+  run(description, generateRound);
 };
 
 export default runEven;
