@@ -1,33 +1,28 @@
 import run from '../index.js';
-import { generateRandomNumber, generateRandomIndex } from '../utils.js';
+import { generateNumber, generateIndex } from '../utils.js';
 
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-const getCorrectAnswer = (operator, number1, number2) => {
-  let correctAnswer;
+const calculate = (operator, x, y) => {
   switch (operator) {
     case '+':
-      correctAnswer = number1 + number2;
-      break;
+      return x + y;
     case '-':
-      correctAnswer = number1 - number2;
-      break;
+      return x - y;
     case '*':
-      correctAnswer = number1 * number2;
-      break;
+      return x * y;
     default:
       throw new Error(`Unknown order state: '${operator}'!`);
   }
-  return correctAnswer;
 };
 
 const generateRound = () => {
-  const number1 = generateRandomNumber(1, 100);
-  const number2 = generateRandomNumber(1, 100);
-  const operator = generateRandomIndex(operators);
+  const number1 = generateNumber(1, 100);
+  const number2 = generateNumber(1, 100);
+  const operator = operators[generateIndex(operators.length)];
   const question = `${number1} ${operator} ${number2}`;
-  const correctAnswer = getCorrectAnswer(operator, number1, number2).toString();
+  const correctAnswer = String(calculate(operator, number1, number2));
   return [question, correctAnswer];
 };
 

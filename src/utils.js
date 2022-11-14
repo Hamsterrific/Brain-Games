@@ -1,4 +1,4 @@
-const generateRandomNumber = (min, max) => (Math.floor(Math.random() * (max - min + 1)) + min);
-const generateRandomIndex = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const generateNumber = (min, max) => (Math.floor(Math.random() * (max - min + 1)) + min);
+const generateIndex = (x) => Math.floor(Math.random() * x);
 
-export { generateRandomNumber, generateRandomIndex };
+export { generateNumber, generateIndex };

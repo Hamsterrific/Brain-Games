@@ -1,9 +1,9 @@
 import run from '../index.js';
-import { generateRandomNumber } from '../utils.js';
+import { generateNumber } from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const checkPrime = (number) => {
+const isPrime = (number) => {
   if (number === 0 || number === 1) {
     return false;
   }
@@ -16,14 +16,9 @@ const checkPrime = (number) => {
 };
 
 const generateRound = () => {
-  const randomNumber = generateRandomNumber(1, 100);
-  const question = `${randomNumber}`;
-  let correctAnswer;
-  if (checkPrime(randomNumber)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const number = generateNumber(1, 100);
+  const question = String(number);
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 

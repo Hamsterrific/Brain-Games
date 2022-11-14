@@ -1,38 +1,38 @@
 import run from '../index.js';
-import { generateRandomNumber, generateRandomIndex } from '../utils.js';
+import { generateNumber, generateIndex } from '../utils.js';
 
 const gameTask = 'What number is missing in the progression?';
 
 const makeProgression = (number, step, length) => {
-  const progArr = [];
+  const progression = [];
   for (let i = 0; i < length; i += 1) {
-    progArr.push(number + (step * i));
+    progression.push(number + (step * i));
   }
-  return progArr;
+  return progression;
+};
+
+const hideNumber = (numbers) => {
+  const hiddenNumber = numbers[generateIndex(numbers.length)];
+  const result = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const number of numbers) {
+    if (number === hiddenNumber) {
+      result.push('..');
+    } else {
+      result.push(number);
+    }
+  }
+  return [result, hiddenNumber];
 };
 
 const generateRound = () => {
-  let correctAnswer;
-  const hideNumber = (arr) => {
-    correctAnswer = generateRandomIndex(arr);
-    const arrHidden = [];
-    // eslint-disable-next-line no-restricted-syntax
-    for (const item of arr) {
-      if (item === correctAnswer) {
-        arrHidden.push('..');
-      } else {
-        arrHidden.push(item);
-      }
-    }
-    return arrHidden;
-  };
-  const startingNumber = generateRandomNumber(1, 100);
-  const progressionStep = generateRandomNumber(1, 5);
-  const progressionLength = 5 + (generateRandomNumber(1, 10));
+  const startingNumber = generateNumber(1, 100);
+  const progressionStep = generateNumber(1, 5);
+  const progressionLength = 5 + (generateNumber(1, 10));
   const progression = makeProgression(startingNumber, progressionStep, progressionLength);
-  const hiddenProgression = hideNumber(progression);
+  const [hiddenProgression, hiddenNumber] = hideNumber(progression);
   const question = `${hiddenProgression.join(' ')}`;
-  correctAnswer = correctAnswer.toString();
+  const correctAnswer = String(hiddenNumber);
   return [question, correctAnswer];
 };
 

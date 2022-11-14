@@ -19,12 +19,12 @@ npm i
 ```
 ## Asciinema
 
-[![asciicast](https://asciinema.org/a/i1LJMGfhZHYQFeWJSmaGe7Oxm.svg)](https://asciinema.org/a/i1LJMGfhZHYQFeWJSmaGe7Oxm)
+[![asciicast](https://asciinema.org/a/CpCoSgePlk0mNkIIZPjjz6MK7.svg)](https://asciinema.org/a/CpCoSgePlk0mNkIIZPjjz6MK7)
 
-[![asciicast](https://asciinema.org/a/Sym58hrcWUCGVI3MgosyaAwcH.svg)](https://asciinema.org/a/Sym58hrcWUCGVI3MgosyaAwcH)
+[![asciicast](https://asciinema.org/a/Kn7Y3UXVo6t9h93eJcXVZeowi.svg)](https://asciinema.org/a/Kn7Y3UXVo6t9h93eJcXVZeowi)
 
-[![asciicast](https://asciinema.org/a/cEJw9aXKn3cDXh6hTCwd58lMr.svg)](https://asciinema.org/a/cEJw9aXKn3cDXh6hTCwd58lMr)
+[![asciicast](https://asciinema.org/a/ldg1JT1Tlon0ifH3wtDORW9fm.svg)](https://asciinema.org/a/ldg1JT1Tlon0ifH3wtDORW9fm)
 
-[![asciicast](https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN.svg)](https://asciinema.org/a/OUyike1Wq3wFw2d6xL1nzLmqN)
+[![asciicast](https://asciinema.org/a/uPBkFgeT9yxAj8muTNw0HWFIB.svg)](https://asciinema.org/a/uPBkFgeT9yxAj8muTNw0HWFIB)
 
-[![asciicast](https://asciinema.org/a/SPsSQha11Bk5ABkedjNqht7Zt.svg)](https://asciinema.org/a/SPsSQha11Bk5ABkedjNqht7Zt)
+[![asciicast](https://asciinema.org/a/JM0TaOFnysb26SyNaGj2e9DwZ.svg)](https://asciinema.org/a/JM0TaOFnysb26SyNaGj2e9DwZ)
