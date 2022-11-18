@@ -1,22 +1,15 @@
-/* eslint-disable no-param-reassign */
 import run from '../index.js';
 import { generateNumber } from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
+const minNumber = 1;
+const maxNumber = 100;
 
-const gcd = (x, y) => {
-  let z;
-  while (y !== 0) {
-    z = x % y;
-    x = y;
-    y = z;
-  }
-  return x;
-};
+const gcd = (x, y) => ((y === 0) ? x : gcd(y, (x % y)));
 
 const generateRound = () => {
-  const number1 = generateNumber(1, 100);
-  const number2 = generateNumber(1, 100);
+  const number1 = generateNumber(minNumber, maxNumber);
+  const number2 = generateNumber(minNumber, maxNumber);
   const question = `${number1} ${number2}`;
   const correctAnswer = String(gcd(number1, number2));
   return [question, correctAnswer];
