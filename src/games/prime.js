@@ -6,7 +6,7 @@ const minNumber = 1;
 const maxNumber = 100;
 
 const isPrime = (number) => {
-  const limit = Math.ceil(Math.sqrt(number));
+  const limit = Math.round(Math.sqrt(number));
   if (number <= 1) {
     return false;
   }
