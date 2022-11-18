@@ -6,11 +6,11 @@ const minNumber = 1;
 const maxNumber = 100;
 
 const isPrime = (number) => {
-  const limit = Math.round(Math.sqrt(number));
+  const limit = Math.ceil(Math.sqrt(number));
   if (number <= 1) {
     return false;
   }
-  for (let i = 2; i < limit; i += 1) {
+  for (let i = 2; i <= limit; i += 1) {
     if (number % i === 0) {
       return false;
     }
